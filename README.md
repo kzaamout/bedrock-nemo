@@ -1,4 +1,5 @@
 # Using NVIDIA NeMo Guardrails with Amazon Bedrock
+[Read this article](https://www.linkedin.com/posts/kzaamout_nvidia-nemoguardrails-aws-activity-7179893247056519168-kQ5W?utm_source=share&utm_medium=member_desktop) for a walkthrough this code.
 
 The following are the required steps to run this code on MacOS or Linux:
 
@@ -31,10 +32,8 @@ Execute the following code from the main directory:
 ```
 python3.12 bedrock-nemo-test.py
 ```
-- should not request information regarding hacking, brining down or shutting down websites
-## 
 
-Exit virtualenv:
+## Exit virtualenv
 ```
 $ deactivate
 ```
