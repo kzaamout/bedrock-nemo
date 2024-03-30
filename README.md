@@ -3,8 +3,9 @@
 The following are the required steps to run this code on MacOS or Linux:
 
 ## Setup AWS credentials
-*Skip this step if you plan to run this code within an AWS account* 
-Follow [this guide](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) to setup your local AWS profile.
+*Skip this step if you plan to run this code within an AWS account*
+
+Follow [this guide](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) to set up your local AWS profile.
 
 ## Configure your local environment
 Install Python 3.12.
