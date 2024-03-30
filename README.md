@@ -23,6 +23,10 @@ Install the required dependencies:
 ```
 $ pip3.12 install -r requirements.txt
 ```
+## Run the code
+```
+python3.12 bedrock-nemo-test.py
+```
 
 Exit virtualenv:
 ```
