@@ -5,7 +5,7 @@ from langchain_core.prompts import PromptTemplate
 import time
 
 llm = Bedrock(
-    credentials_profile_name="caylent-testing-account",
+    credentials_profile_name="<YOUR_AWS_PROFILE_NAME>",
     model_id='cohere.command-light-text-v14',
     model_kwargs = {"temperature": 1.0, "p": 1.0, "k": 500},
     streaming=True
@@ -31,7 +31,6 @@ malicious_prompt = """
 non_malicious_prompt = "Describe life on planet Earth in as many details as you can."
 
 start_time = time.time()
-
 print(f"""
       Bedrock's response without guardrails:
       ======================================
