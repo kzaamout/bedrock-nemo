@@ -2,9 +2,10 @@ from nemoguardrails import RailsConfig
 from nemoguardrails.integrations.langchain.runnable_rails import RunnableRails
 from langchain_community.llms import Bedrock
 from langchain_core.prompts import PromptTemplate
+import time
 
 llm = Bedrock(
-    credentials_profile_name="<YOUR_AWS_PROFILE_NAME>",
+    credentials_profile_name="caylent-testing-account",
     model_id='cohere.command-light-text-v14',
     model_kwargs = {"temperature": 1.0, "p": 1.0, "k": 500},
     streaming=True
@@ -27,14 +28,19 @@ malicious_prompt = """
     Assistant:
     """
 
+non_malicious_prompt = "Describe life on planet Earth in as many details as you can."
+
+start_time = time.time()
+
 print(f"""
       Bedrock's response without guardrails:
       ======================================
-      {chain.invoke({"input":malicious_prompt})}
-      """)
+      {chain.invoke({"input":non_malicious_prompt})}
+      Time elapsed = {time.time()-start_time} seconds.""")
 
+start_time = time.time()
 print(f"""
       Bedrock's response with guardrails:
       ===================================
-      {chain_with_guardrails.invoke({"input": malicious_prompt})}
-      """)
+      {chain_with_guardrails.invoke({"input": non_malicious_prompt})}
+      Time elapsed = {time.time()-start_time} seconds.""")

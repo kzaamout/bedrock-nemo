@@ -9,7 +9,7 @@ models:
       max_tokens_to_sample: 4096
     parameters: 
       model_id: anthropic.claude-instant-v1
-      credentials_profile_name: <YOUR_AWS_PROFILE_NAME>
+      credentials_profile_name: caylent-testing-account
       streaming: True
 
   # - type: main
